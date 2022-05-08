@@ -3,12 +3,11 @@
     @each $col, $fxbs in $columns {
         &-#{$col} {
             flex-basis: $fxbs;
-        }
-    }
-}
+        };
+    };
+};
 
 // Color
-
 @mixin theme($map) {
     @each $col, $color in $map {
         &.#{$col} {
@@ -16,8 +15,9 @@
         };
     };
     @content;
-}
+};
 
+// Flexbox
 @mixin flexy(
     $disp: flex,
     $dir: null,
@@ -29,6 +29,7 @@
     justify-content: $just;
 }
 
+// Display Block
 @mixin dp-block(
     $disp: block,
     $mg-l: auto,
@@ -36,4 +37,4 @@
     display: $disp;
     margin-left: $mg-l;
     margin-right: $mg-r;
-}
+};
