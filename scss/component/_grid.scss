@@ -1,0 +1,57 @@
+
+/* ====================================== */
+/* Grid Style                             */
+/* ====================================== */
+
+.container {
+    padding: 0 10px;
+    @media (min-width: $mq-bp) {
+        max-width: 1400px;
+        @include dp-block;
+    };
+  }
+
+.centered {
+    @media (min-width: $mq-bp) {
+        @include dp-block;
+    };
+}
+
+.row {
+    @include flexy($dir: column);
+    padding: 1em 10px;
+    @media (min-width: $mq-bp) {
+        flex-direction: row;
+    };
+}
+
+[class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    @media (min-width: $mq-bp) {
+        @include flexy($just:center);
+        margin-top: 0;
+        align-items: center;
+        & + & {
+            margin-left: 10px;
+        };
+    };
+}
+
+.col {
+    @media(min-width: $mq-bp) {
+        @include col-flex($columns);
+    }
+}
+
+.theme {
+    @include theme($themes-cl);
+}
+
+.card {
+    flex-basis: 100%;
+}
+

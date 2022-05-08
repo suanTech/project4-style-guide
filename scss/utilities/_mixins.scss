@@ -1,0 +1,39 @@
+// Flex basis
+@mixin col-flex($columns) {
+    @each $col, $fxbs in $columns {
+        &-#{$col} {
+            flex-basis: $fxbs;
+        }
+    }
+}
+
+// Color
+
+@mixin theme($map) {
+    @each $col, $color in $map {
+        &.#{$col} {
+            background-color: $color;
+        };
+    };
+    @content;
+}
+
+@mixin flexy(
+    $disp: flex,
+    $dir: null,
+    $wrap: null,
+    $just: null) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+}
+
+@mixin dp-block(
+    $disp: block,
+    $mg-l: auto,
+    $mg-r: auto) {
+    display: $disp;
+    margin-left: $mg-l;
+    margin-right: $mg-r;
+}

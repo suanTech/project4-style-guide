@@ -1,0 +1,63 @@
+
+/* ====================================== */
+/* Variables                              */
+/* ====================================== */
+
+
+// Primary colors
+$white: #fff;
+
+$color-body: #777;
+$color-primary: #58e1c1;
+$color-secondary: #51ddfc;
+$color-shade: #ccc;
+
+
+// Button colors
+$button-cl: (
+    'default': #51ddfc,
+    'success': #63cc82,
+    'error': #e4757a,
+    'info': #927bc1,
+    'warning': #fd7856
+);
+
+// Columns theme colors
+$themes-cl: (
+    'col-1': map-get($button-cl, 'info'),
+    'col-2': map-get($button-cl, 'warning'),
+    'col-3': #deb2ee,
+    'col-4': #7ee6fd,
+    'col-5': #88d9a0,
+    'col-6': #4da2bb,
+    'col-7': #ec9fa3,
+    'col-8': #fd9f85,
+    'col-12': #80e8d1
+);
+
+
+// Fonts
+$font-default: 'Lato', sans-serif;
+$font-reg: 300;
+$font-bold: 700;
+
+
+// MQ breakpoints
+$mq-bp: 768px;
+
+
+// Column flex basis
+$columns: (
+    '1': 8.33%,
+    '2': 16.67%,
+    '3': 25.00%,
+    '4': 33.33%,
+    '5': 41.67%,
+    '6': 50.00%,
+    '7': 58.33%,
+    '8': 66.67%,
+    '9': 75.00%,
+   '10': 83.33%,
+   '11': 91.67%,
+   '12': 100%
+);
